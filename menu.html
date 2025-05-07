@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore ZAYAKA Cafe's delicious menu featuring specialty coffees, flavorful dishes, and decadent desserts in our unique industrial and surreal atmosphere.">
+  <meta name="keywords" content="ZAYAKA cafe menu, eclectic cafe menu, specialty coffee, main dishes, desserts, cafe food">
+  <meta name="author" content="ZAYAKA cafe">
+  
+  <title>Menu | ZAYAKA Cafe</title>
+  <link rel="canonical" href="https://www.ZAYAKAcafe.in/pages/menu.html">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/images/header/favicon.ico">
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400&family=Cormorant+Infant:wght@700&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  
+  <style>
+    /* Menu Page Specific Styles */
+    .menu-section {
+      margin-bottom: 3rem;
+    }
+    
+    .menu-section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--dark-color);
+      padding-bottom: 1rem;
+    }
+    
+    .menu-section-title:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 3px;
+      background-color: var(--primary-color);
+    }
+    
+    .menu-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    }
+    
+    .menu-item:last-child {
+      border-bottom: none;
+    }
+    
+    .menu-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    
+    .menu-item-title {
+      font-family: var(--heading-font);
+      font-size: 1.25rem;
+      margin: 0;
+    }
+    
+    .menu-item-price {
+      font-family: var(--heading-font);
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+    
+    .menu-item-description {
+      color: var(--gray-color);
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .dietary-info {
+      font-size: 0.8rem;
+    }
+    
+    .dietary-info span {
+      margin-right: 0.75rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      background-color: #f0f0f0;
+    }
+    
+    .vegetarian {
+      color: green;
+    }
+    
+    .vegan {
+      color: darkgreen;
+    }
+    
+    .gluten-free {
+      color: brown;
+    }
+    
+    .spicy {
+      color: red;
+    }
+    
+    .popular {
+      color: var(--primary-color);
+    }
+    
+    .menu-nav-container {
+      position: sticky;
+      top: 100px;
+      padding: 1.5rem;
+      border-radius: 10px;
+      background-color: var(--light-color);
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    }
+    
+    .menu-nav {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 0;
+    }
+    
+    .menu-nav li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .menu-nav li:last-child {
+      margin-bottom: 0;
+    }
+    
+    .menu-nav a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: var(--dark-color);
+      border-left: 3px solid transparent;
+      transition: all 0.3s ease;
+    }
+    
+    .menu-nav a:hover, 
+    .menu-nav a.active {
+      color: var(--primary-color);
+      border-left-color: var(--primary-color);
+      background-color: rgba(210, 105, 30, 0.1);
+    }
+    
+    .menu-nav a i {
+      margin-right: 0.5rem;
+    }
+    
+    .page-header {
+      padding: 8rem 0 4rem;
+      background-color: var(--dark-color);
+      color: white;
+      position: relative;
+    }
+    
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('../assets/images/menu/menu-header-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.3;
+      z-index: 0;
+    }
+    
+    .page-header .container {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <h1 class="logo">ZAKAYA</h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About us.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container text-center">
+      <h1 class="display-3 mb-3">Our Menu</h1>
+      <p class="lead">Carefully crafted dishes and beverages that delight the senses</p>
+    </div>
+  </header>
+
+  <!-- Menu Content -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Menu Navigation Sidebar -->
+        <div class="col-lg-3 mb-4 mb-lg-0">
+          <div class="menu-nav-container">
+            <h4 class="mb-3">Menu Categories</h4>
+            <ul class="menu-nav">
+              <li><a href="#coffee" class="active"><i class="fas fa-mug-hot"></i> Coffee & Tea</a></li>
+              <li><a href="#beverages"><i class="fas fa-glass-cheers"></i> Beverages</a></li>
+              <li><a href="#breakfast"><i class="fas fa-bacon"></i> Breakfast</a></li>
+              <li><a href="#starters"><i class="fas fa-carrot"></i> Starters</a></li>
+              <li><a href="#mains"><i class="fas fa-utensils"></i> Main Course</a></li>
+              <li><a href="#desserts"><i class="fas fa-ice-cream"></i> Desserts</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Menu Items -->
+        <div class="col-lg-9">
+          <!-- Coffee & Tea -->
+          <div id="coffee" class="menu-section">
+            <h2 class="menu-section-title">Coffee & Tea</h2>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Signature Espresso</h3>
+                <div class="menu-item-price">₹150</div>
+              </div>
+              <p class="menu-item-description">Our house blend of premium arabica beans, rich and velvety with notes of chocolate and hazelnut.</p>
+              <div class="dietary-info">
+                <span class="popular"><i class="fas fa-star"></i> Popular</span>
+              </div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Caramel Macchiato</h3>
+                <div class="menu-item-price">₹180</div>
+              </div>
+              <p class="menu-item-description">Espresso combined with vanilla-flavored syrup, fresh milk and caramel sauce.</p>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Café Mocha</h3>
+                <div class="menu-item-price">₹190</div>
+              </div>
+              <p class="menu-item-description">Espresso with rich chocolate, steamed milk, topped with whipped cream.</p>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Masala Chai</h3>
+                <div class="menu-item-price">₹130</div>
+              </div>
+              <p class="menu-item-description">Traditional Indian spiced tea with cardamom, cinnamon, and ginger.</p>
+              <div class="dietary-info">
+                <span class="popular"><i class="fas fa-star"></i> Popular</span>
+                <span class="vegetarian"><i class="fas fa-leaf"></i> Vegetarian</span>
+              </div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Green Tea</h3>
+                <div class="menu-item-price">₹120</div>
+              </div>
+              <p class="menu-item-description">Premium Japanese sencha green tea, delicate and refreshing.</p>
+              <div class="dietary-info">
+                <span class="vegan"><i class="fas fa-seedling"></i> Vegan</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Beverages -->
+          <div id="beverages" class="menu-section">
+            <h2 class="menu-section-title">Beverages</h2>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Fruit Smoothie</h3>
+                <div class="menu-item-price">₹200</div>
+              </div>
+              <p class="menu-item-description">Seasonal fruits blended with yogurt and honey.</p>
+              <div class="dietary-info">
+                <span class="vegetarian"><i class="fas fa-leaf"></i> Vegetarian</span>
+              </div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Fresh Lime Soda</h3>
+                <div class="menu-item-price">₹130</div>
+              </div>
+              <p class="menu-item-description">Refreshing lime with soda water, served sweet or salty.</p>
+              <div class="dietary-info">
+                <span class="vegan"><i class="fas fa-seedling"></i> Vegan</span>
+              </div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Virgin Mojito</h3>
+                <div class="menu-item-price">₹180</div>
+              </div>
+              <p class="menu-item-description">Muddled mint leaves, lime juice, and soda with a hint of sweetness.</p>
+              <div class="dietary-info">
+                <span class="popular"><i class="fas fa-star"></i> Popular</span>
+                <span class="vegan"><i class="fas fa-seedling"></i> Vegan</span>
+              </div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Classic Milkshake</h3>
+                <div class="menu-item-price">₹220</div>
+              </div>
+              <p class="menu-item-description">Choose from chocolate, vanilla, strawberry or butterscotch.</p>
+              <div class="dietary-info">
+                <span class="vegetarian"><i class="fas fa-leaf"></i> Vegetarian</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Breakfast -->
+          <div id="breakfast" class="menu-section">
+            <h2 class="menu-section-title">Breakfast</h2>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Avocado Toast</h3>
+                <div class="menu-item-price">₹280</div>
+              </div>
+              <p class="menu-item-description">Sourdough toast topped with smashed avocado, cherry tomatoes, and feta cheese.</p>
+              <div class="dietary-info">
+                <span class="vegetarian"><i class="fas fa-leaf"></i> Vegetarian</span>
+              </div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Masala Omelette</h3>
+                <div class="menu-item-price">₹220</div>
+              </div>
+              <p class="menu-item-description">Indian-style omelette with onions, tomatoes, green chilies, and spices.</p>
+              <div class="dietary-info">
+                <span class="gluten-free"><i class="fas fa-bread-slice"></i> Gluten-Free</span>
+                <span class="spicy"><i class="fas fa-pepper-hot"></i> Spicy</span>
+              </div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Pancake Stack</h3>
+                <div class="menu-item-price">₹250</div>
+              </div>
+              <p class="menu-item-description">Fluffy pancakes served with maple syrup, fresh berries, and whipped cream.</p>
+              <div class="dietary-info">
+                <span class="popular"><i class="fas fa-star"></i> Popular</span>
+                <span class="vegetarian"><i class="fas fa-leaf"></i> Vegetarian</span>
+              </div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Breakfast Burrito</h3>
+                <div class="menu-item-price">₹270</div>
+              </div>
+              <p class="menu-item-description">Flour tortilla filled with scrambled eggs, beans, cheese, avocado, and salsa.</p>
+              <div class="dietary-info">
+                <span class="vegetarian"><i class="fas fa-leaf"></i> Vegetarian</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Starters -->
+          <div id="starters" class="menu-section">
+            <h2 class="menu-section-title">Starters</h2>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Paneer Tikka</h3>
+                <div class="menu-item-price">₹320</div>
+              </div>
+              <p class="menu-item-description">Marinated cottage cheese cubes, bell peppers, and onions, grilled in a tandoor.</p>
+              <div class="dietary-info">
+                <span class="popular"><i class="fas fa-star"></i> Popular</span>
+                <span class="vegetarian"><i class="fas fa-leaf"></i> Vegetarian</span>
+                <span class="gluten-free"><i class="fas fa-bread-slice"></i> Gluten-Free</span>
+              </div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Crispy Potato Wedges</h3>
+                <div class="menu-item-price">₹220</div>
+              </div>
+              <p class="menu-item-description">Crispy on the outside, fluffy on the inside, served with garlic aioli.</p>
+              <div class="dietary-info">
+                <span class="vegetarian"><i class="fas fa-leaf"></i> Vegetarian</span>
+              </div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Hummus Platter</h3>
+                <div class="menu-item-price">₹280</div>
+              </div>
+              <p class="menu-item-description">Creamy hummus served with pita bread, cucumber, carrots, and olives.</p>
+              <div class="dietary-info">
+                <span class="vegan"><i class="fas fa-seedling"></i> Vegan</span>
+              </div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Chilli Chicken</h3>
+                <div class="menu-item-price">₹350</div>
+              </div>
+              <p class="menu-item-description">Indo-Chinese style chicken pieces tossed with bell peppers and spicy sauce.</p>
+              <div class="dietary-info">
+                <span class="popular"><i class="fas fa-star"></i> Popular</span>
+                <span class="spicy"><i class="fas fa-pepper-hot"></i> Spicy</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Main Course -->
+          <div id="mains" class="menu-section">
+            <h2 class="menu-section-title">Main Course</h2>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Butter Chicken</h3>
+                <div class="menu-item-price">₹420</div>
+              </div>
+              <p class="menu-item-description">Tender chicken cooked in a creamy tomato sauce with butter and spices.</p>
+              <div class="dietary-info">
+                <span class="popular"><i class="fas fa-star"></i> Popular</span>
+                <span class="gluten-free"><i class="fas fa-bread-slice"></i> Gluten-Free</span>
+              </div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Vegetable Biryani</h3>
+                <div class="menu-item-price">₹350</div>
+              </div>
+              <p class="menu-item-description">Fragrant basmati rice cooked with mixed vegetables and aromatic spices.</p>
+              <div class="dietary-info">
+                <span class="vegetarian"><i class="fas fa-leaf"></i> Vegetarian</span>
+                <span class="gluten-free"><i class="fas fa-bread-slice"></i> Gluten-Free</span>
+              </div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Penne Arrabbiata</h3>
+                <div class="menu-item-price">₹380</div>
+              </div>
+              <p class="menu-item-description">Penne pasta tossed in a spicy tomato sauce with garlic and herbs.</p>
+              <div class="dietary-info">
+                <span class="vegetarian"><i class="fas fa-leaf"></i> Vegetarian</span>
+                <span class="spicy"><i class="fas fa-pepper-hot"></i> Spicy</span>
+              </div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">ZAYAKA Special Burger</h3>
+                <div class="menu-item-price">₹320</div>
+              </div>
+              <p class="menu-item-description">Grilled patty with cheese, caramelized onions, lettuce, and our special sauce.</p>
+              <div class="dietary-info">
+                <span class="popular"><i class="fas fa-star"></i> Popular</span>
+              </div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Paneer Makhani</h3>
+                <div class="menu-item-price">₹380</div>
+              </div>
+              <p class="menu-item-description">Cottage cheese cubes in a rich and creamy tomato gravy.</p>
+              <div class="dietary-info">
+                <span class="vegetarian"><i class="fas fa-leaf"></i> Vegetarian</span>
+                <span class="gluten-free"><i class="fas fa-bread-slice"></i> Gluten-Free</span>
+              </div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Thai Green Curry</h3>
+                <div class="menu-item-price">₹400</div>
+              </div>
+              <p class="menu-item-description">Choice of vegetables or chicken in a fragrant coconut milk curry with Thai herbs.</p>
+              <div class="dietary-info">
+                <span class="gluten-free"><i class="fas fa-bread-slice"></i> Gluten-Free</span>
+                <span class="spicy"><i class="fas fa-pepper-hot"></i> Spicy</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Desserts -->
+          <div id="desserts" class="menu-section">
+            <h2 class="menu-section-title">Desserts</h2>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Chocolate Lava Cake</h3>
+                <div class="menu-item-price">₹250</div>
+              </div>
+              <p class="menu-item-description">Warm chocolate cake with a molten chocolate center, served with vanilla ice cream.</p>
+              <div class="dietary-info">
+                <span class="popular"><i class="fas fa-star"></i> Popular</span>
+                <span class="vegetarian"><i class="fas fa-leaf"></i> Vegetarian</span>
+              </div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Tiramisu</h3>
+                <div class="menu-item-price">₹280</div>
+              </div>
+              <p class="menu-item-description">Italian dessert made of coffee-soaked ladyfingers and mascarpone cheese.</p>
+              <div class="dietary-info">
+                <span class="vegetarian"><i class="fas fa-leaf"></i> Vegetarian</span>
+              </div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Gulab Jamun</h3>
+                <div class="menu-item-price">₹180</div>
+              </div>
+              <p class="menu-item-description">Traditional Indian dessert of fried milk solids soaked in rose-flavored syrup.</p>
+              <div class="dietary-info">
+                <span class="vegetarian"><i class="fas fa-leaf"></i> Vegetarian</span>
+              </div>
+            </div>
+            
+            <div class="menu-item">
+              <div class="menu-item-header">
+                <h3 class="menu-item-title">Fruit Parfait</h3>
+                <div class="menu-item-price">₹220</div>
+              </div>
+              <p class="menu-item-description">Layers of yogurt, granola, and fresh seasonal fruits.</p>
+              <div class="dietary-info">
+                <span class="vegetarian"><i class="fas fa-leaf"></i> Vegetarian</span>
+                <span class="gluten-free"><i class="fas fa-bread-slice"></i> Gluten-Free</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Dietary Note -->
+  <section class="py-4 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h3 class="mb-3">Special Dietary Requirements</h3>
+          <p>We are happy to accommodate special dietary needs. Please inform our staff of any allergies or restrictions when ordering.</p>
+          <div class="mt-3">
+            <span class="mx-2"><i class="fas fa-leaf text-success"></i> Vegetarian</span>
+            <span class="mx-2"><i class="fas fa-seedling text-success"></i> Vegan</span>
+            <span class="mx-2"><i class="fas fa-bread-slice text-warning"></i> Gluten-Free</span>
+            <span class="mx-2"><i class="fas fa-pepper-hot text-danger"></i> Spicy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation CTA -->
+  <section class="contact-cta py-5 bg-dark text-white">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8 mb-4 mb-lg-0">
+          <h2>Ready to Experience Our Menu?</h2>
+          <p class="lead mb-0">Book a table now or contact us for special events and catering.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="contact.html" class="btn btn-light btn-lg">Contact Us</a>
+          <a href="reservation.html" class="btn btn-outline-light btn-lg ms-2">Book a Table</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h4 class="mb-4">ZAYAKA Cafe</h4>
+          <p>An eclectic café adorned with mechanical artwork, superhero masks, and other props that add an industrial and surreal vibe.</p>
+          <div class="social-icons">
+            <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <h4 class="mb-4">Hours</h4>
+          <ul class="list-unstyled">
+            <li>Monday - Thursday: 9:00 AM - 11:00 PM</li>
+            <li>Friday - Saturday: 9:00 AM - 1:00 AM</li>
+            <li>Sunday: 10:00 AM - 10:00 PM</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4 class="mb-4">Contact</h4>
+          <ul class="list-unstyled contact-info">
+            <li><i class="fas fa-map-marker-alt me-2"></i>SARAFA MARKET ANJAD</li>
+            <li><i class="fas fa-phone me-2"></i>11*********</li>
+            <li><i class="fas fa-envelope me-2"></i>shadowmail248@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4 bg-light">
+      <div class="row">
+        <div class="col text-center">
+          <p class="mb-0">&copy; 2025 ZAYAKA Cafe. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+  <!-- Custom JavaScript -->
+  <script src="../assets/js/main.js"></script>
+  
+  <script>
+    // Smooth scrolling for menu navigation
+    document.querySelectorAll('.menu-nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        // Set all links to inactive
+        document.querySelectorAll('.menu-nav a').forEach(link => {
+          link.classList.remove('active');
+        });
+        
+        // Set clicked link to active
+        this.classList.add('active');
+        
+        // Scroll to target section with offset for navbar
+        window.scrollTo({
+          top: targetElement.offsetTop - 100,
+          behavior: 'smooth'
+        });
+      });
+    });
+    
+    // Update active menu link on scroll
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('.menu-section');
+      const navItems = document.querySelectorAll('.menu-nav a');
+      
+      let currentSection = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 150;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+          currentSection = '#' + section.getAttribute('id');
+        }
+      });
+      
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === currentSection) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
